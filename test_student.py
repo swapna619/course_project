@@ -28,7 +28,7 @@ class TestStudentGrade(unittest.TestCase):
     def test_main_output(self):
         test_args = [
             "student.py",      # sys.argv[0] script name
-            "swapna s",       # Name
+            "swapna ",       # Name
             "ICA",             # Department
             "3",               # Semester
             "85",              # Marks1
@@ -48,7 +48,7 @@ class TestStudentGrade(unittest.TestCase):
             # ✅ Check key content
             self.assertIn("GRADING CRITERIA", output)
             self.assertIn("STUDENT DETAILS", output)
-            self.assertIn("Name       : swapna s", output)
+            self.assertIn("Name       : swapna", output)
             self.assertIn("Department : ICA", output)
             self.assertIn("Semester   : 3", output)
             self.assertIn("Average    : 84.33", output)
