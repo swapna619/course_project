@@ -26,7 +26,6 @@ def print_grade_table():
     print("+------------+---------+")
 
 def main():
-    # User input
     name = input("Enter student name: ")
     department = input("Enter department: ")
     semester = input("Enter semester: ")
