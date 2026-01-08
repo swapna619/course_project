@@ -28,16 +28,24 @@ def print_grade_table():
     print("+------------+---------+")
 
 def main():
-    if len(sys.argv) != 7:
-        print("Usage: python student.py <name> <department> <semester> <m1> <m2> <m3>")
-        sys.exit(1)
+    # Jenkins / Command-line execution
+    if len(sys.argv) == 7:
+        name = sys.argv[1]
+        department = sys.argv[2]
+        semester = sys.argv[3]
+        marks1 = int(sys.argv[4])
+        marks2 = int(sys.argv[5])
+        marks3 = int(sys.argv[6])
 
-    name = sys.argv[1]
-    department = sys.argv[2]
-    semester = sys.argv[3]
-    marks1 = int(sys.argv[4])
-    marks2 = int(sys.argv[5])
-    marks3 = int(sys.argv[6])
+    # Local interactive execution
+    else:
+        name = input("Enter student name: ")
+        department = input("Enter department: ")
+        semester = input("Enter semester: ")
+
+        marks1 = int(input("Enter marks for Subject 1: "))
+        marks2 = int(input("Enter marks for Subject 2: "))
+        marks3 = int(input("Enter marks for Subject 3: "))
 
     average = (marks1 + marks2 + marks3) / 3
     grade = calculate_grade(average)
