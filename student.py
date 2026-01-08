@@ -1,4 +1,3 @@
-import sys
 def calculate_grade(avg):
     if 90 <= avg <= 100:
         return "S"
